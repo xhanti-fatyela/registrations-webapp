@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "test",
-    "start": "node index.js"
+    "test": "test"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -19,7 +18,8 @@
     "mocha": "^8.2.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
