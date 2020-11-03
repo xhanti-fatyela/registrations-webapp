@@ -6,6 +6,8 @@
 
             <input type="text" name="name" value="" placeholder="Enter Registration Number" class="regText">
 
+            <p class="msg"> {{messages.msg}}</p>
+
 <button class="button regBtn" on type="submit" name="button">Add</button>
         </div>
 </form>
@@ -14,7 +16,7 @@
     
 
 
-<h2>Select Town:</h2>
+<h2>Filter:</h2>
 
 <form action="/regNumbers" method="GET">
 			<select class="select" name="opt">
@@ -35,7 +37,7 @@
     {{/each}}
 
 <p class="error"> {{messages.info}}</p>
-<p>
+
 <p class="msg"> {{messages.msg}}</p>
 
 
