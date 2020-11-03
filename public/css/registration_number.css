@@ -31,7 +31,7 @@ input[type=text]{
     
 }
 
-.regBtn, .filterBtn {
+.regBtn, .subbtn {
      
     background-color: black;
     font-size: 20px;
@@ -59,4 +59,12 @@ li{
     border-radius: 10px;
     margin: 0.5em;
     max-width: fit-content;
+}
+
+select{
+    border: 1px solid #000000;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+
 }
