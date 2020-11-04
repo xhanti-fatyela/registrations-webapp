@@ -46,6 +46,7 @@ app.set('view engine', 'handlebars');
 app.get("/", routeKeeper.home);
 app.post("/regNumbers", routeKeeper.addRegs);
 app.get("/regNumbers", routeKeeper.filterByTown);
+app.get('/clear', routeKeeper.forClearing);
 
 let PORT = process.env.PORT || 3000;
 

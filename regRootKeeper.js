@@ -41,9 +41,20 @@ module.exports = function routeKeeper(registrations) {
             });
 
     }
+
+    async function forClearing(req, res) {
+
+        await registrations.clearData();
+    
+    
+        res.redirect('/')
+    
+    
+      }
     return {
         addRegs,
         home,
-        filterByTown
+        filterByTown,
+        forClearing
     }
 };

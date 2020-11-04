@@ -55,11 +55,18 @@ module.exports = function Registrations(pool) {
 
         return allRegs.rows;
     }
+
+    async function clearData() {
+
+        await pool.query(`delete from reg_numbers`)
+
+    }
     return {
         regAdd,
         doesRegExist,
         filterRegs,
-        displayallRegs
+        displayallRegs,
+        clearData
     }
 }
 
