@@ -5,7 +5,7 @@ module.exports = function routeKeeper(registrations) {
         let value = req.body.name
             let upper = value.toUpperCase();
             if (value !== "") {
-                if (/C[ALJ] \d+\s|-\d+$/.test(upper) || /C[YLJ] \d+\s|-\d+$/.test(upper)  ||  /C[KLJ] \d+\s|-\d+$/.test(upper)) {
+                if (/^C[YLKA] [\d\s-]{5,10}/.test(upper)){
                     if (await registrations.doesRegExist(upper) === 0) {
                         await registrations.regAdd(upper)
                         req.flash('msg', 'Successfuly Entered')

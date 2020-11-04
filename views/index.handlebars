@@ -1,6 +1,10 @@
 <form action="/regNumbers" method="POST">
     <div class="regbox">
         <h1>Registration Number:</h1>
+    <div class="example">
+
+        <h2>e.g CA 123 567 | CY 123 456 | CK 123 456</h2>
+    </div>
 
         <div class="regTypes">
 
@@ -32,15 +36,13 @@
 			</form>
       
       <br>
-    {{#each reg}}
+      
+
+    </div>
+<hr>
+        {{#each reg}}
 
     <li id="regDisplay" class="color">{{this.reg}}</li>
 
     {{/each}}
-
-
-
-
-
-    </div>
 
