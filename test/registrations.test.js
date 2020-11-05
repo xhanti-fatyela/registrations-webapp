@@ -97,7 +97,7 @@ describe('The Registration App Factory Function', function () {
 
                 await registrations.regAdd("CA 245 816")
                 await registrations.regAdd("CY 323 455")
-                var actual = await registrations.filterRegs('5')
+                var actual = await registrations.filterRegs('1')
                 var expected = [ { reg: "CA 245 816" } ]
 
         
@@ -111,7 +111,7 @@ describe('The Registration App Factory Function', function () {
                 await registrations.regAdd("CA 245 816")
                 await registrations.regAdd("CK 323 455")
                 await registrations.regAdd("CK 123 455")
-                var actual = await registrations.filterRegs('6')
+                var actual = await registrations.filterRegs('2')
                 var expected = [ { reg: "CK 323 455" }, { reg: "CK 123 455" } ]
 
         
@@ -125,7 +125,7 @@ describe('The Registration App Factory Function', function () {
                 await registrations.regAdd("CY 245 816")
                 await registrations.regAdd("CK 323 455")
                 await registrations.regAdd("CK 123 455")
-                var actual = await registrations.filterRegs('7')
+                var actual = await registrations.filterRegs('3')
                 var expected = [ { reg: "CY 245 816" } ]
 
         
