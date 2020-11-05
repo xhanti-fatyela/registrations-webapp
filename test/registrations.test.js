@@ -93,18 +93,47 @@ describe('The Registration App Factory Function', function () {
         
             });
 
-            it("should filter reg by selected town", async function () {
+            it("should filter reg by selected town (CapeTown)", async function () {
 
                 await registrations.regAdd("CA 245 816")
-                await registrations.regAdd("CA 323 455")
-                var actual = await registrations.filterRegs('All')
-                var expected = [ { reg: 'CA 245 816' }, { reg: 'CA 323 455' } ]
+                await registrations.regAdd("CY 323 455")
+                var actual = await registrations.filterRegs('5')
+                var expected = [ { reg: "CA 245 816" } ]
 
         
                 assert.deepStrictEqual(actual, expected)
         
         
             });
+
+            it("should filter reg by selected town (Malmesbury)", async function () {
+
+                await registrations.regAdd("CA 245 816")
+                await registrations.regAdd("CK 323 455")
+                await registrations.regAdd("CK 123 455")
+                var actual = await registrations.filterRegs('6')
+                var expected = [ { reg: "CK 323 455" }, { reg: "CK 123 455" } ]
+
+        
+                assert.deepStrictEqual(actual, expected)
+        
+        
+            });
+
+            it("should filter reg by selected town (Bellville)", async function () {
+
+                await registrations.regAdd("CY 245 816")
+                await registrations.regAdd("CK 323 455")
+                await registrations.regAdd("CK 123 455")
+                var actual = await registrations.filterRegs('7')
+                var expected = [ { reg: "CY 245 816" } ]
+
+        
+                assert.deepStrictEqual(actual, expected)
+        
+        
+            });
+
 
         })
    
