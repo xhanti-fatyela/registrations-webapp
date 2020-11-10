@@ -3,12 +3,12 @@
         <h1>Registration Number:</h1>
     <div class="example">
 
-        <h2>e.g CA 123 567 | CY 123 456 | CK 123 456</h2>
+        <h2>e.g CA 123 567 | CY 123-456 | CK 123456</h2>
     </div>
 
         <div class="regTypes">
 
-            <input type="text" name="name" value="" placeholder="Enter Registration Number" class="regText">
+            <input type="text" name="name" value="" placeholder="Enter Registration Number" class="regText" maxlength="10" >
 <button class="button regBtn" on type="submit" name="button">Add</button>
             <p class="msg"> {{messages.msg}}</p>
             <p class="error"> {{messages.info}}</p>
